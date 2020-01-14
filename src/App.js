@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.css";
 
+import testImage from "./assets/test_image.png";
+
 function App() {
-  return <h1>Hello Woorld!</h1>;
+  return <img width="200" src={testImage} />;
 }
 
 export default App;
