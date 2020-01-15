@@ -1,3 +1,8 @@
+# Removendo Ítens do estado
+
+## src/components/TechList.js
+
+```diff
 import React, { Component } from "react";
 
 class TechList extends Component {
@@ -21,9 +26,9 @@ class TechList extends Component {
     });
   };
 
-  handleDelete = tech => {
-    this.setState({ techs: this.state.techs.filter(t => t !== tech) });
-  };
++  handleDelete = tech => {
++    this.setState({ techs: this.state.techs.filter(t => t !== tech) });
++  };
 
   render() {
     return (
@@ -42,9 +47,9 @@ class TechList extends Component {
                * this.handleDelete(tech), e sim dentro de uma arrow function.
                * Isto pq senão dispararia o método ao carregar a página
                */}
-              <button onClick={() => this.handleDelete(tech)} type="button">
-                Remover
-              </button>
++              <button onClick={() => this.handleDelete(tech)} type="button">
++                Remover
++              </button>
             </li>
           ))}
         </ul>
@@ -60,3 +65,4 @@ class TechList extends Component {
 }
 
 export default TechList;
+```
