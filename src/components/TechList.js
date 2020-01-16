@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import TechItem from "./TechItem";
+
 class TechList extends Component {
   state = {
     newTech: "",
@@ -35,17 +37,12 @@ class TechList extends Component {
       <form onSubmit={this.handleSubmit}>
         <ul>
           {this.state.techs.map(tech => (
-            <li key={tech}>
-              {tech}
-              {/**
-               * No onClick eu não posso usar direto o método
-               * this.handleDelete(tech), e sim dentro de uma arrow function.
-               * Isto pq senão dispararia o método ao carregar a página
-               */}
-              <button onClick={() => this.handleDelete(tech)} type="button">
-                Remover
-              </button>
-            </li>
+            <TechItem
+              key={tech}
+              tech={tech}
+              // handleDelete dentro de arrow function para não disparar a toa
+              onDelete={() => this.handleDelete(tech)}
+            />
           ))}
         </ul>
         <input
