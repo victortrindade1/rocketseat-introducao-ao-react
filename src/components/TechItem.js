@@ -12,4 +12,9 @@ function TechItem({ tech, onDelete }) {
   );
 }
 
+// Valores default
+TechItem.defaultProps = {
+  tech: "Foobar"
+};
+
 export default TechItem;
