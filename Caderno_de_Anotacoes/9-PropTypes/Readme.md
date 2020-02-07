@@ -42,10 +42,9 @@ export default TechItem;
 ## Em classe
 
 ```diff
-class FooBar extends Component {
-+  static propTypes ={
-+    myVar: PropTypes.string.isRequired
-+  }
+class FooBar extends Component { ... }
 
-  state = {};
++ FooBar.propTypes ={
++   myVar: PropTypes.string.isRequired
++ }
 ```
